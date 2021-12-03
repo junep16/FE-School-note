@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change color</title>
+    <style> 
+        .box {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto; 
+            background-color: transparent;
+            border: 1px solid black;
+        }
+        .btn-cont {
+            width: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px auto;
+        }
+        .color-red {
+            background-color: red;
+        }
+        .color-yellow {
+            background-color: yellow;
+        }
+        .color-blue {
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+     <div class="box"></div>
+     <div class = "btn-cont">
+         <button id="red">빨강</button>
+         <button id="yellow">노랑</button>
+         <button id="blue">파랑</button>
+     </div>
+    <script>
+        const redBtn = document.querySelector('#red');
+        const yellowBtn = document.querySelector('#yellow');
+        const blueBtn = document.querySelector('#blue');
+        const box = document.querySelector('.box');
+
+        redBtn.addEventListener('click', function(){
+           box.classList.add("color-red");
+        })
+
+        yellowBtn.addEventListener('click', function(){
+           box.classList.add("color-yellow");
+        })
+
+        blueBtn.addEventListener('click', function(){
+           box.classList.add("color-blue");
+        })
+    </script>
+</body>
+</html>
